@@ -1,0 +1,15 @@
+{
+  "name": "dede",
+  "version": "0.0.1",
+  "description": "Binary serialisation and deserialisation",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --collect-coverage",
+    "test:nocov": "jest",
+    "lint:check": "prettier --check . && eslint .",
+    "lint:fix": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "Jimmie Lovell",
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "target": "es2015",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    // "sourceMap": true,
+    // "declaration": true
+  },
+  "exclude": [
+    "tests/**/*",
+    "dist/**/*",
+    "node_modules"
+  ]
+}

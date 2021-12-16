@@ -1,0 +1,28 @@
+const typeNames = [
+  'null',
+  'undefined',
+  'uint',
+  'int',
+  'bigint',
+  'biguint',
+  'double',
+  'record',
+  'ref',
+  'string',
+  'buffer',
+  'true',
+  'false',
+  'date',
+  'date64',
+  'constructorN',
+  'arrayStart',
+  'arrayEnd',
+  'objectStart',
+  'objectEnd',
+  'setStart',
+  'setEnd',
+  'mapStart',
+  'mapEnd',
+];
+
+export const TYPES = Object.fromEntries(typeNames.map((name, index) => [name, index]));
