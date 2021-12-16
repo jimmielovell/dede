@@ -121,7 +121,7 @@ class Encoder {
                 args: entry.args(item),
             };
         }
-        throw `Encoding of item ${item} is not supported`;
+        throw `Encoding of item ${constructorName} is not supported`;
     }
     encodeObjectValue(value) {
         const type = typeof value;
@@ -181,7 +181,7 @@ class Encoder {
                     }
                     case 'Buffer': {
                         const length = item.length;
-                        this.writeUInt8(types_1.TYPES.bin);
+                        this.writeUInt8(types_1.TYPES.buffer);
                         this.writeUInt32(length);
                         item.copy(this.buffer, this.offset);
                         this.offset += length;
@@ -195,7 +195,7 @@ class Encoder {
                 return this.writeString(item);
         }
     }
-    encode(data) {
+    encode(data, constructor) {
         this.reset();
         this.encodeItem(data, typeof data);
         return this.buffer.slice(0, this.offset);
@@ -297,7 +297,7 @@ class Decoder {
                     throw `Constructor ${code} is unknown`;
                 }
             }
-            case types_1.TYPES.bin: {
+            case types_1.TYPES.buffer: {
                 const length = this.readUInt32();
                 const buf = this.buffer.slice(this.offset, this.offset + length);
                 this.offset += length;

@@ -2,8 +2,10 @@
   "name": "dede",
   "version": "0.0.1",
   "description": "Binary serialisation and deserialisation",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "jest --collect-coverage",
     "test:nocov": "jest",
     "lint:check": "prettier --check . && eslint .",
@@ -11,5 +13,11 @@
   },
   "keywords": [],
   "author": "Jimmie Lovell",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
 }

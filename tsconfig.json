@@ -5,9 +5,11 @@
     "module": "commonjs",
     "outDir": "./dist",
     "moduleResolution": "node",
-    // "sourceMap": true,
-    // "declaration": true
+    "declaration": true
   },
+  "include": [
+    "src/**/*",
+  ],
   "exclude": [
     "tests/**/*",
     "dist/**/*",

@@ -12,7 +12,7 @@ const typeNames = [
     'record',
     'ref',
     'string',
-    'bin',
+    'buffer',
     'true',
     'false',
     'date',
